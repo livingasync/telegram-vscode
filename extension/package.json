@@ -1,0 +1,33 @@
+{
+  "name": "telegram-vscode",
+  "displayName": "telegram-vscode",
+  "description": "Telegram for VSCode",
+  "version": "1.0.0",
+  "publisher": "livingasync",
+  "icon": "icon.png",
+  "categories": [
+    "Other"
+  ],
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "telegram-vscode.openTelegramWeb",
+        "title": "Open Telegram Web"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
