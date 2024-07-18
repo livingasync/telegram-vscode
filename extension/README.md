@@ -8,8 +8,15 @@ Open Command Palette with `CTRL`+`SHIFT`+`P` or `F1` and type `Open Telegram Web
 
 ## Requirements
 
-TBD
+1. Run the telegram-proxy-server docker container with
+   ```sh
+   docker run -d --name telegram-proxy-server livingasync/telegram-proxy-server
+   ```
 
+2. Reuse container for next time with
+   ```sh
+   docker start telegram-proxy-server
+   ```
 ## Known Issues
 
 Tell me))

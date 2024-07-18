@@ -1,10 +1,10 @@
 {
-  "name": "proxy-server",
+  "name": "telegram-proxy-server",
   "version": "1.0.0",
   "description": "",
-  "main": "proxy-server.js",
+  "main": "telegram-proxy-server.js",
   "scripts": {
-    "start": "node proxy-server.js"
+    "start": "node telegram-proxy-server.js"
   },
   "dependencies": {
     "express": "^4.17.1",

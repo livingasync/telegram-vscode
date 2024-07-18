@@ -18,11 +18,9 @@ app.use('/', createProxyMiddleware({
   },
   onProxyRes: (proxyRes, req, res) => {
     delete proxyRes.headers['x-frame-options'];
-    console.log('Response headers:', proxyRes.headers);
   },
-  logLevel: 'debug'
 }));
 
-app.listen(3000, () => {
-  console.log('Proxy server is running on http://localhost:3000');
+app.listen(49152, () => {
+  console.log('Proxy server is running on http://localhost:49152');
 });

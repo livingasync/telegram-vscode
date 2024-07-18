@@ -16,7 +16,7 @@ function activate(context) {
       }
     );
 
-    const proxyUrl = 'http://localhost:3000';
+    const proxyUrl = 'http://localhost:49152';
 
     panel.webview.html = getWebviewContent(proxyUrl);
 
