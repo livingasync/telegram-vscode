@@ -34,3 +34,7 @@ No need for external script running anymore
 
 Added Output Channel 'Telegram-VSCode'
 Fixed BUG with proxy script not running...
+
+### 1.2.2
+
+Fix for the proxy script not running on macos
