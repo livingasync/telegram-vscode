@@ -2,9 +2,9 @@
   "name": "telegram-vscode",
   "displayName": "telegram-vscode",
   "description": "Telegram for VSCode",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "livingasync",
-  "icon": "icon.png",
+  "icon": "images/icon.png",
   "categories": [
     "Other"
   ],
@@ -21,9 +21,27 @@
     "commands": [
       {
         "command": "telegram-vscode.openTelegramWeb",
-        "title": "Open Telegram Web"
+        "title": "Open Telegram in Tab"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "telegram-sidebar",
+          "title": "Telegram",
+          "icon": "images/sidebar_icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "telegram-sidebar": [
+        {
+          "type": "webview",
+          "id": "telegramWebview",
+          "name": "Telegram"
+        }
+      ]
+    }
   },
   "devDependencies": {
     "@types/vscode": "^1.91.0",
