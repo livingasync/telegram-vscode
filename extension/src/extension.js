@@ -1,6 +1,34 @@
 const vscode = require('vscode');
+const { execFile } = require('child_process');
+const path = require('path');
+const os = require('os');
+
+const platform = os.platform();
+let serverExecutable;
+
+if (platform === 'win32') {
+  serverExecutable = 'telegram-proxy-server-win.exe';
+} else if (platform === 'darwin') {
+  serverExecutable = 'telegram-proxy-server-mac';
+} else if (platform === 'linux') {
+  serverExecutable = 'telegram-proxy-server-linux';
+} else {
+  console.error(`Unsupported platform: ${platform}`);
+  process.exit(1);
+}
+
+const serverPath = path.join(__dirname, 'binaries', serverExecutable);
 
 function activate(context) {
+
+    execFile(serverPath, (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Error executing server: ${error}`);
+          return;
+        }
+        console.log(`Server output: ${stdout}`);
+      });
+
     context.subscriptions.push(
         vscode.commands.registerCommand('telegram-vscode.openTelegramWeb', () => {
             const panel = vscode.window.createWebviewPanel(

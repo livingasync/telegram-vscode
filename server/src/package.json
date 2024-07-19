@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "telegram-proxy-server.js",
+  "bin": "telegram-proxy-server.js",
   "scripts": {
     "start": "node telegram-proxy-server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "http-proxy-middleware": "^2.0.0"
+    "http-proxy-middleware": "^2.0.0",
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "scripts": "telegram-proxy-server.js"
   }
 }
