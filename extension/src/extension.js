@@ -17,17 +17,19 @@ if (platform === 'win32') {
   process.exit(1);
 }
 
-const serverPath = path.join(__dirname, 'binaries', serverExecutable);
+const serverPath = path.resolve(__dirname, 'binaries', serverExecutable);
+const logger = vscode.window.createOutputChannel('Telegram-VSCode');
 
 function activate(context) {
 
     execFile(serverPath, (error, stdout, stderr) => {
         if (error) {
-          console.error(`Error executing server: ${error}`);
-          return;
+            logger.appendLine(`Error executing server: ${error.message}`);
+            logger.appendLine(`stderr: ${stderr}`);
+            return;
         }
-        console.log(`Server output: ${stdout}`);
-      });
+        logger.appendLine(`Server output: ${stdout}`);
+    });
 
     context.subscriptions.push(
         vscode.commands.registerCommand('telegram-vscode.openTelegramWeb', () => {
@@ -54,6 +56,8 @@ function activate(context) {
             }
         })
     );
+
+    context.subscriptions.push(logger);
 }
 
 function getWebviewContent() {

@@ -29,3 +29,8 @@ Added sidebar feature
 ### 1.2.0
 
 No need for external script running anymore
+
+### 1.2.1
+
+Added Output Channel 'Telegram-VSCode'
+Fixed BUG with proxy script not running...
