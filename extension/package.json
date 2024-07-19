@@ -2,7 +2,7 @@
   "name": "telegram-vscode",
   "displayName": "telegram-vscode",
   "description": "Telegram for VSCode",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "publisher": "livingasync",
   "icon": "images/icon.png",
   "categories": [

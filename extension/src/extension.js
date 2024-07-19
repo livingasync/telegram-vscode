@@ -9,7 +9,7 @@ let serverExecutable;
 if (platform === 'win32') {
   serverExecutable = 'telegram-proxy-server-win.exe';
 } else if (platform === 'darwin') {
-  serverExecutable = 'telegram-proxy-server-mac';
+  serverExecutable = 'telegram-proxy-server-macos';
 } else if (platform === 'linux') {
   serverExecutable = 'telegram-proxy-server-linux';
 } else {
